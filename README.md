@@ -45,7 +45,7 @@ Kedua bagian ini menggunakan satu file konfigurasi Firebase terpusat (`config.js
 
 ```
 sepatu-nyaman/
-├── 📄 config.js               # [RAHASIA] File konfigurasi Firebase.
+├── 📄 config.js               # File konfigurasi Firebase.
 ├── 📄 config.example.js       # Contoh file konfigurasi untuk developer.
 ├── 📁 aset-kategori-sepatu-main/ # Semua aset untuk halaman KATEGORI.
 │   ├── css/
