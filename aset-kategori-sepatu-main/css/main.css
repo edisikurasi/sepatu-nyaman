@@ -638,6 +638,7 @@ body.is-page .content-single .post-container {
     border-radius: 8px;
     font-weight: 700;
     font-size: 1.1rem;
+    color: var(--primary-text-color);
     cursor: pointer;
     text-align: center;
 }
