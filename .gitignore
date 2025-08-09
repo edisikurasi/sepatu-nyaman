@@ -1,0 +1,13 @@
+# File konfigurasi yang berisi kredensial sensitif
+# JANGAN PERNAH unggah file ini ke repositori publik.
+/config.js
+
+# Ketergantungan Node.js
+# Folder ini bisa menjadi sangat besar dan harus selalu diabaikan.
+# Cukup jalankan `npm install` untuk menginstalnya kembali.
+node_modules/
+
+# File log dan debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

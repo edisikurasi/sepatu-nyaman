@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ulasan mendalam dan spesifikasi lengkap produk sepatu. Temukan kelebihan, kekurangan, dan skor kenyamanan sebelum Anda membeli.">
+    
+    <script type="application/ld+json" id="product-schema"></script>
+
+    <title>Ulasan Detail Produk | Sepatu Nyaman</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap"></noscript>
+
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+    <div id="main-container" class="sn-container" style="display: none;">
+        <nav class="sn-breadcrumbs" id="breadcrumbs-container"></nav>
+
+        <div class="sn-detail-wrapper">
+            <div class="sn-gallery-wrapper">
+                <div class="main-image-container" style="position:relative;">
+                    <div id="badge-promo" style="position:absolute;top:16px;left:16px;z-index:2;display:none;"></div>
+                    <div id="editor-pick-badge-detail" class="sn-editor-pick-badge-detail" style="display: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg><span>Pilihan Editor</span></div>
+                    <div id="badge-stock" style="position:absolute;top:56px;left:16px;z-index:2;display:none;"></div>
+                    <picture id="main-image-picture">
+                        <img src="https://placehold.co/600x600/f0f0f0/ccc?text=+" alt="Gambar produk utama" id="main-product-image">
+                    </picture>
+                </div>
+                <div class="thumbnail-images" id="thumbnail-container"></div>
+            </div>
+
+            <div class="sn-info-wrapper">
+                <div id="product-brand" class="sn-product-brand-detail"></div>
+                <h1 id="product-name" class="sn-product-name-detail"></h1>
+                <div class="sn-comfort-score" id="comfort-score-container"></div>
+                <div class="sn-price-container">
+                    <div class="sn-price" id="product-price"></div>
+                    <div class="sn-old-price" id="product-old-price" style="display: none;"></div>
+                </div>
+                
+                <div class="sn-cost-calculator">
+                    <p>Lihat seberapa terjangkau investasi ini. Pakai berapa kali sebulan?</p>
+                    <div class="sn-cost-input-wrapper">
+                        <button class="cost-qty-btn" id="cost-minus-btn">-</button>
+                        <input type="number" id="wears-per-month" value="10" min="1">
+                        <button class="cost-qty-btn" id="cost-plus-btn">+</button>
+                        <span>kali/bulan</span>
+                    </div>
+                    <p class="sn-cost-result">Biaya per pemakaian: <strong id="cost-per-wear-result">-</strong></p>
+                </div>
+
+                <div class="sn-color-selector">
+                    <h3>Pilih Warna: <span id="selected-color-name"></span></h3>
+                    <div id="color-selector-container"></div>
+                </div>
+
+                <div class="sn-size-selector">
+                    <h3>Pilih Ukuran (EUR):</h3>
+                    <div class="size-options" id="size-options-container"></div>
+                </div>
+                <a href="#" class="sn-affiliate-button" id="affiliate-button" target="_blank" rel="noopener noreferrer">Cek Harga & Beli di Partner</a>
+            </div>
+        </div>
+
+        <div class="sn-style-gallery" id="style-gallery-section" style="display: none;">
+            <h2>Inspirasi Gaya</h2>
+            <div class="sn-carousel-wrapper">
+                <div class="sn-style-grid">
+                    <div class="sn-style-carousel" id="style-carousel-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sn-review-section">
+            <h2>Ulasan Mendalam dari Editor</h2>
+            <div id="review-content-container"></div>
+            <div class="sn-pros-cons">
+                <div class="pros">
+                    <h3>Kelebihan</h3>
+                    <ul id="advantages-list"></ul>
+                </div>
+                <div class="cons">
+                    <h3>Kekurangan</h3>
+                    <ul id="disadvantages-list"></ul>
+                </div>
+            </div>
+            <h3>Spesifikasi Teknis</h3>
+            <table class="sn-specs-table">
+                <tbody id="specs-table-body"></tbody>
+            </table>
+
+            <div class="sn-field-test-section" id="field-test-section" style="display: none;">
+                <h3>Uji Lapangan oleh Editor</h3>
+                <div id="field-test-container"></div>
+            </div>
+        </div>
+
+        <section id="user-reviews-section">
+            <h3>Ulasan dari Pembeli</h3>
+            <ul id="user-reviews-list"></ul>
+            <div class="write-review-controls">
+                <button id="write-review-btn">Tulis Ulasan Anda</button>
+                <form id="user-review-form" style="display: none;">
+                    <h4>Bagikan Pendapat Anda</h4>
+                    <div class="form-group">
+                        <label for="review-author-name">Nama Anda</label>
+                        <input type="text" id="review-author-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Rating Anda</label>
+                        <div class="rating-input" id="rating-input"></div>
+                        <input type="hidden" id="rating-value" value="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Ulasan Anda</label>
+                        <textarea id="review-text" required></textarea>
+                    </div>
+                    <button type="submit" class="sn-affiliate-button">Kirim Ulasan</button>
+                    <div id="form-feedback"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="sn-related-products-section" id="related-products-section" style="display: none;">
+            <h2>Anda Mungkin Juga Suka</h2>
+            <div class="sn-related-grid-wrapper">
+                <div id="related-product-grid"></div>
+            </div>
+            <div class="sn-view-all-container">
+                <a href="#" id="view-all-link" class="sn-affiliate-button" style="display: inline-block; width: auto;">Lihat Semua di Kategori Ini</a>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="sn-compare-tray" class="sn-compare-tray">
+        <div class="sn-compare-tray-inner">
+            <div id="sn-compare-items-container" class="sn-compare-items"></div>
+            <div class="sn-compare-actions">
+                <button id="sn-compare-button-cta" class="sn-compare-button-cta" disabled>Bandingkan</button>
+                <button id="sn-clear-compare" class="sn-clear-compare">Bersihkan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="sn-compare-modal" class="sn-compare-modal">
+        <div class="sn-compare-modal-content">
+            <header class="sn-compare-modal-header">
+                <h2>Perbandingan Produk</h2>
+                <button id="sn-compare-modal-close" class="sn-compare-modal-close">×</button>
+            </header>
+            <div id="sn-compare-table-container" class="sn-compare-table-wrapper"></div>
+        </div>
+    </div>
+
+    <div id="loading-container" class="sn-container">
+        <div class="skeleton-breadcrumbs">
+            <div class="skeleton-line" style="width: 10%;"></div>
+            <div class="skeleton-line" style="width: 20%;"></div>
+            <div class="skeleton-line" style="width: 35%;"></div>
+        </div>
+        <div class="sn-detail-wrapper">
+            <div class="skeleton-gallery">
+                <div class="skeleton-box main-image"></div>
+                <div class="skeleton-thumbnails">
+                    <div class="skeleton-box thumb"></div>
+                    <div class="skeleton-box thumb"></div>
+                    <div class="skeleton-box thumb"></div>
+                    <div class="skeleton-box thumb"></div>
+                    <div class="skeleton-box thumb"></div>
+                </div>
+            </div>
+            <div class="skeleton-info">
+                <div class="skeleton-line" style="width: 30%; height: 16px;"></div>
+                <div class="skeleton-line title" style="width: 90%; height: 40px;"></div>
+                <div class="skeleton-line" style="width: 50%; height: 24px;"></div>
+                <div class="skeleton-line" style="width: 40%; height: 32px;"></div>
+                <div class="skeleton-line" style="width: 100%; height: 150px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sn-lightbox-modal">
+        <button id="sn-lightbox-close">×</button>
+        <button class="lightbox-nav-btn" id="lightbox-prev-btn">❮</button>
+        <picture id="lightbox-picture">
+             <img src="" alt="Inspirasi Gaya Diperbesar" id="sn-lightbox-img">
+        </picture>
+        <button class="lightbox-nav-btn" id="lightbox-next-btn">❯</button>
+    </div>
+
+    <script type="module" src="../js/detail-produk.js"></script>
+
+</body>
+</html>

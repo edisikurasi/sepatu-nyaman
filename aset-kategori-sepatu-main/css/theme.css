@@ -1,0 +1,27 @@
+/* Variabel Warna tiruan dari Tema Wuzz Anda untuk testing */
+:root {
+    --primary-background: #ffffff;
+    --secondary-background: #f8f9fa;
+    --primary-text-color: #484F5B;
+    --secondary-text-color: #657386;
+    --darkest-grey: #212933;
+    --light-grey: #E1E7EC;
+    --white-text-color: #FFF;
+    --link-color: #1F70D9;
+    --success-color: #10b981;
+    --sale-color: #ef4444;
+    --star-color: #f59e0b;
+    --gradient-btn-color: linear-gradient(to right, #1F70D9, #4A90E2);
+}
+[data-theme="dark"] {
+    --primary-background: #1c222a;
+    --secondary-background: #141a22;
+    --primary-text-color: #E1E7EC;
+    --secondary-text-color: #B8C4CD;
+    --darkest-grey: #F8F9FA;
+    --light-grey: #484F5B;
+    --link-color: #7E89FF;
+    --success-color: #34d399;
+    --sale-color: #f87171;
+    --gradient-btn-color: linear-gradient(to right, #7E89FF, #939dff);
+}

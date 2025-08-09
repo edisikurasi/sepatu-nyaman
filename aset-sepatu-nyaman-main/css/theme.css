@@ -1,0 +1,40 @@
+/* ===================================================================
+   THEME.CSS - Sepatu Nyaman
+   -------------------------------------------------------------------
+   File ini berisi semua variabel warna yang digunakan di seluruh 
+   situs. Ini memungkinkan pengelolaan tema (mode terang/gelap) 
+   secara terpusat.
+   ================================================================= */
+
+:root {
+    /* Critical CSS Variables */
+    --primary-background: #ffffff;
+    --secondary-background: #f8f9fa;
+    --primary-text-color: #484F5B;
+    --secondary-text-color: #657386;
+    --darkest-grey: #212933;
+    --light-grey: #E1E7EC;
+    --white-text-color: #FFF;
+    --link-color: #1F70D9;
+    --star-color: #f59e0b;
+    /* Non-Critical CSS Variables */
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --gradient-btn-color: linear-gradient(to right, #1F70D9, #4A90E2);
+    --sale-color: #ef4444;
+}
+
+[data-theme="dark"] {
+    /* Critical CSS Variables */
+    --primary-background: #1c222a;
+    --secondary-background: #141a22;
+    --primary-text-color: #E1E7EC;
+    --secondary-text-color: #B8C4CD;
+    --darkest-grey: #F8F9FA;
+    --light-grey: #484F5B;
+    --link-color: #7E89FF;
+    /* Non-Critical CSS Variables */
+    --success-color: #34d399;
+    --danger-color: #f87171;
+    --gradient-btn-color: linear-gradient(to right, #7E89FF, #939dff);
+}
