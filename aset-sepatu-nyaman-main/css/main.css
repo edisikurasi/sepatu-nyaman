@@ -194,6 +194,7 @@ body {
     right: 12px;
     background-color: var(--primary-background);
     border: 1px solid var(--light-grey);
+    color: var(--primary-text-color);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -207,6 +208,15 @@ body {
 .sn-compare-button:hover {
     background-color: var(--secondary-background);
     transform: scale(1.1);
+}
+/* Optimasi untuk Mode Gelap */
+[data-theme="dark"] .sn-compare-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+[data-theme="dark"] .sn-compare-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 .sn-compare-button.selected {
     background-color: var(--link-color);
